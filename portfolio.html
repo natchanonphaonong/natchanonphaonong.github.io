@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานของฉัน</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .project {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ผลงานของฉัน</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าเเรก</a></li>
+                <li><a href="portfolio.html">ผลงานของฉัน</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>ผลงานล่าสุด</h2>
+            <div class="project">
+                <h3>โปรเจ็กต์ 1: เกมทายหมายเลข</h3>
+                <p>ทายหมายเลขระหว่าง 1 ถึง 10</p>
+                <input type="number" id="guess1" min="1" max="10" />
+                <button onclick="guessNumber(1)">ทาย</button>
+                <div class="result" id="result1"></div>
+            </div>
+            <div class="project">
+                <h3>โปรเจ็กต์ 2: เกมสุ่มสี</h3>
+                <p>กดปุ่มเพื่อสุ่มสีพื้นหลัง</p>
+                <button onclick="changeColor()">สุ่มสี</button>
+                <div class="result" id="result2"></div>
+            </div>
+            <div class="project">
+                <h3>โปรเจ็กต์ 3: นับถอยหลัง</h3>
+                <p>กดปุ่มเพื่อเริ่มนับถอยหลังจาก 10</p>
+                <button onclick="countDown()">เริ่มนับถอยหลัง</button>
+                <div class="result" id="result3"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ของฉัน</p>
+    </footer>
+
+    <script>
+        function guessNumber(project) {
+            const guess = parseInt(document.getElementById(`guess${project}`).value);
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            const result = document.getElementById(`result${project}`);
+            if (guess === randomNumber) {
+                result.innerText = "ยอดเยี่ยม! คุณทายถูก!";
+            } else {
+                result.innerText = `ไม่ถูกต้อง! หมายเลขคือ ${randomNumber}`;
+            }
+        }
+
+        function changeColor() {
+            const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33F6"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+            document.getElementById('result2').innerText = `สีใหม่: ${randomColor}`;
+        }
+
+        function countDown() {
+            let count = 10;
+            const result = document.getElementById('result3');
+            result.innerText = `เริ่มนับถอยหลัง: ${count}`;
+            const interval = setInterval(() => {
+                count--;
+                result.innerText = count >= 0 ? `เริ่มนับถอยหลัง: ${count}` : "หมดเวลา!";
+                if (count < 0) clearInterval(interval);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

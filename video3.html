@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Title 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+            background-color: #f4f4f9;
+            background: url('img/songjinwoo.jpg') no-repeat center center fixed;
+            background-size: cover; /* ให้พื้นหลังขยายเต็มจอ */
+        }
+
+        header {
+            background-color: #020202;
+            color: white;
+            padding: 20px 0;
+            opacity: 0.8; /* โปร่งใส 80% */
+            position: relative; /* ให้สามารถวางตำแหน่งภายใน header */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* เพิ่มลิงก์ "กลับไปหน้า Home" ที่มุมซ้ายบน */
+        .back-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff; /* สีตัวอักษรขาว */
+            font-size: 1rem;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังโปร่งใสที่สว่างขึ้น */
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* เปลี่ยนสีเมื่อ hover */
+            color: #f1f1f1; /* สีตัวอักษรสว่างขึ้นเมื่อ hover */
+        }
+
+        main {
+            padding: 20px;
+            display: flex; /* ใช้ flexbox */
+            flex-direction: column; /* ให้เนื้อหาจัดในแนวตั้ง */
+            align-items: center; /* จัดกลางในแนวตั้ง */
+            justify-content: center; /* จัดกลางในแนวนอน */
+        }
+
+        /* กรอบรวมของโปสเตอร์และข้อความ */
+        .anime-poster-container {
+            display: flex;
+            flex-direction: column; /* จัดให้โปสเตอร์และข้อความอยู่ในแถวเดียวกัน */
+            align-items: center; /* จัดกลางในแนวตั้ง */
+            justify-content: center; /* จัดกลางในแนวนอน */
+            margin-bottom: 20px; /* ให้มีระยะห่างระหว่างโปสเตอร์กับวิดีโอ */
+            padding: 15px; /* เพิ่มพื้นที่รอบๆ */
+            border: 3px solid #333; /* กรอบรอบๆ โปสเตอร์และข้อความ */
+            border-radius: 15px; /* มุมโค้ง */
+            background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+        }
+
+        .anime-poster {
+            max-width: 250px; /* กำหนดขนาดของโปสเตอร์ */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .anime-poster img {
+            width: 100%; /* ให้ภาพเต็มขนาดกรอบ */
+        }
+
+        .anime-title {
+            color: white;
+            padding: 10px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 10px; /* เพิ่มระยะห่างจากโปสเตอร์ */
+            text-align: center; /* จัดข้อความตรงกลาง */
+        }
+
+        video {
+            max-width: 800px; /* กำหนดความกว้างสูงสุดของวิดีโอ */
+            width: 90%; /* ปรับให้เหมาะกับหน้าจอเล็ก */
+            border-radius: 10px; /* เพิ่มมุมโค้งให้วิดีโอ */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้วิดีโอ */
+        }
+
+        /* สไตล์สำหรับข้อความใต้วิดีโอ */
+        .video-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6); /* พื้นหลังโปร่งใส */
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงา */
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- ลิงก์ "กลับไปหน้า Home" -->
+        <a href="first_project.html" class="back-home">กลับไปหน้า Home</a>
+        <h1>Merloi Hub</h1>
+    </header>
+    <main>
+        <!-- โปสเตอร์และชื่อที่อยู่ข้างๆ -->
+        <div class="anime-poster-container">
+            <div class="anime-poster">
+                <img src="img/one_piece.jpg" alt="One Piece Poster">
+            </div>
+            <div class="anime-title">
+                เรื่องย่อ One Piece วันพีซ  เรื่องราวในยุคทองของโจรสลัด โจรสลัดทุกคนมีเป้าหมายเดียวกันคือเพื่อค้นหา สมบัติที่เรียกว่า "วันพีซ" ซึ่งผู้ใดสามารถค้นหาและครอบครองวันพีซอยู่ ผู้นั้นก็คือเจ้าแห่งโจรสลัด(ราชาโจรสลัด) โดยผู้ที่เคยครอบครองวันพีซนั้นมีอยู่คนเดียวตามที่เปิดเผยคือ เจ้าแห่งโจรสลัด โกลด์ ดี โรเจอร์ ซึ่งหลังจากที่ ได้ครอบครองวันพีซแล้ว โกลด์ ดี โรเจอร์ก็ได้มอบตัว และยอมรับโทษการประหารชีวิตที่เกาะโร๊คบ้านเกิดของตน และก่อนตายโกลด์ ดี โรเจอร์ ได้ทิ้งคำพูดก่อนตายที่เปลี่ยนยุคสมัยของโจรสลัดว่า "สมบัติของฉันน่ะเหรอ อยากได้ก็เอาไปสิ ไปหาเอาเลย ฉันเอาทุกอย่างบนโลกไปไว้ที่นั่นหมดแล้ว" แล้วเหล่า โจรสลัดทั้งหลายจึงมุ่งหน้าสู่แกรนด์ไลน์เพื่อตามหาวันพีซ
+            </div>
+        </div>
+
+        <!-- วิดีโอที่อยู่ด้านล่าง -->
+        <video controls>
+            <source src="video/one_piece.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- ข้อความด้านล่างวิดีโอ -->
+        <div class="video-info">
+            ดูการ์ตูนออนไลน์ | ดูอนิเมะออนไลน์ | อนิเมะพากย์ไทย | อนิเมะซับไทย | ตอนใหม่ล่าสุด
+        </div>
+    </main>
+</body>
+</html>

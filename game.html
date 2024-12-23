@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Game Website</title>
+    <style>
+        /* พื้นหลังของทั้งหน้า */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('img/snow.jpg'); /* ใส่ path ของภาพพื้นหลังที่ต้องการ */
+            background-size: cover; /* ให้ภาพพื้นหลังครอบคลุมทั้งหน้า */
+            background-position: center center; /* ตั้งตำแหน่งภาพพื้นหลังให้ตรงกลาง */
+            color: #ffffff;
+            overflow: hidden; /* ป้องกันไม่ให้มีการเลื่อนหรือซูม */
+            position: relative; /* ทำให้หิมะตกได้ */
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #fff;
+        }
+
+        .game-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .game-card {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            overflow: hidden; /* ป้องกันภาพซูมเกินขอบ */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 250px; /* ปรับความสูงของภาพให้เหมาะสม */
+            object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่การ์ด */
+            transition: transform 0.3s ease; /* เพิ่มการเคลื่อนไหวเมื่อซูม */
+        }
+
+        .game-card img:hover {
+            transform: scale(1.05); /* เพิ่มการซูมเมื่อ hover */
+        }
+
+        .game-card h2 {
+            margin: 20px;
+            font-size: 1.8em;
+            color: #ffffff;
+        }
+
+        .game-card p {
+            margin: 0 20px 20px 20px;
+            font-size: 1em;
+            color: #aaaaaa;
+        }
+
+        .game-card a {
+            display: block;
+            text-align: center;
+            margin: 15px 20px 20px 20px;
+            padding: 12px 20px;
+            background-color: #ff5722;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .game-card a:hover {
+            background-color: #e64a19;
+        }
+
+        /* CSS สำหรับหิมะตก */
+        .snowflake {
+            position: absolute;
+            top: -30px;
+            color: #ffffff;
+            font-size: 24px; /* ขนาดหิมะ */
+            user-select: none;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* เพิ่มต้นคริสต์มาสที่มุมขวาล่าง */
+        .christmas-tree {
+            position: fixed;
+            bottom: -7px; /* ห่างจากขอบล่าง */
+            right: -30px; /* ห่างจากขอบขวา */
+            width: 250px; /* ขนาดของต้นคริสต์มาส */
+            height: auto;
+        }
+        /* เพิ่มต้นคริสต์มาสที่มุมซ้ายล่าง */
+        .christmas-tree-left {
+             position: fixed;
+             bottom: -30px; /* ห่างจากขอบล่าง */
+             left: -120px; /* ห่างจากขอบซ้าย */
+              width: 400px; /* ขนาดของต้นคริสต์มาส */
+              height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>เกม.com</h1>
+    </header>
+    <div class="game-gallery">
+        <div class="game-card">
+            <img src="img/worm.webp" alt="Game 1 Poster">
+            <h2>เกมหนอน</h2>
+            <p></p>
+            <a href="snake_game.html">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="img/sumo.jpg" alt="Game 2 Poster">
+            <h2>เกมซูโม่ต่อสู้</h2>
+            <p></p>
+            <a href="subway.html">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="img/zombie.avif" alt="Game 3 Poster">
+            <h2>เกมยิงซอมบี้</h2>
+            <p></p>
+            <a href="marilo.html">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="img/1v1.jpg" alt="Game 4 Poster">
+            <h2>เกมเอาชีวิตรอด</h2>
+            <p></p>
+            <a href="1v1.html">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="img/9pool.avif" alt="Game 5 Poster">
+            <h2>เกมสนุ๊ก</h2>
+            <p></p>
+            <a href="xo.html">Play Now</a>
+        </div>
+    </div>
+
+    <!-- เพิ่มต้นคริสต์มาส d-->
+    <!-- เพิ่มต้นคริสต์มาส -->
+    <img src="img/crismas.png" alt="Christmas Tree" class="christmas-tree">
+    <!-- เพิ่มต้นคริสต์มาสด้านซ้ายล่าง -->
+    <img src="img/red_crismas.png" alt="Christmas Tree" class="christmas-tree-left">
+
+
+
+    <!-- JavaScript สำหรับหิมะตก -->
+    <script>
+        function createSnowflakes() {
+            const numberOfSnowflakes = 100; // จำนวนหิมะ
+            const snowflakesContainer = document.body;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                let snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerText = '❄'; // ใช้เครื่องหมายหิมะ
+                snowflake.style.left = Math.random() * 100 + 'vw'; // กำหนดตำแหน่งเริ่มต้น
+                snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // กำหนดความเร็วในการตก
+                snowflake.style.animationDelay = Math.random() * 5 + 's'; // กำหนดเวลาเริ่มต้น
+
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes(); // สร้างหิมะ
+    </script>
+</body>
+</html>

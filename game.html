@@ -24,17 +24,18 @@
             padding: 40px 20px;
             background-color: rgba(0, 0, 0, 0.5);
         }
-        
-        /* ปรับฟอนต์ของเกม.com ให้เป็นdธีมคริสต์มาส */
+
+        /* ปรับฟอนต์ของเกม.com ให้เป็นธีมคริสต์มาส */
         header h1 {
             margin: 0;
             font-size: 4em;
-            color: #ff0000; /* สีแดงที่เหมาะกับธีมคริสต์มาส */
-            font-family: 'Pacifico', cursive; /* ฟอนต์ที่ดูสนุกสนาน */
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6); /* เพิ่มเงาให้ข้อความ */
-            animation: sparkle 1.5s infinite alternate; /* เพิ่มการกระพริบ */
+            color: #ff0000;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+            animation: sparkle 1.5s infinite alternate;
         }
 
+        /* การเคลื่อนไหวของข้อความ 'Merry Christmas' */
         @keyframes sparkle {
             0% {
                 text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6), 0 0 25px #ff0000, 0 0 5px #ff0000;
@@ -42,6 +43,17 @@
             100% {
                 text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6), 0 0 35px #ff0000, 0 0 15px #ff0000;
             }
+        }
+
+        /* สไตล์ของ Merry Christmas */
+        .merry-christmas {
+            text-align: center;
+            font-size: 3em;
+            color: #05b0ff;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
+            margin-top: 20px;
+            animation: sparkle 1.5s infinite alternate;
         }
 
         .game-gallery {
@@ -199,6 +211,11 @@
     <!-- เพิ่มซานต้าขี่ผ่าน -->
     <img src="img/santa.png" alt="Santa Riding" class="santa">
 
+    <!-- เพิ่มข้อความ Merry Christmas -->
+    <div class="merry-christmas">
+        Merry Christmas
+    </div>
+
     <!-- JavaScript สำหรับหิมะตก -->
     <script>
         function createSnowflakes() {
@@ -220,4 +237,3 @@
         createSnowflakes(); // สร้างหิมะ
     </script>
 </body>
-</html>

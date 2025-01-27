@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test na</title>
+</head>
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    background: #2a9d8f;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+nav {
+    grid-area: nav;
+    background: #f4a261;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    background: #e9c46a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #264653;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background: #e76f51;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <header class="header"><h2>โล้กร้อน: ปัญหาระดับโลกที่ต้องเเก้ไข</h2></header>
+        <nav class="nav"><p>สาเหตุของโลกร้อน</p>
+            <p>ผลกระทบของโลกร้อน</p>
+            <p>เเนวทางเเก้ไข</p>
+        </nav>
+        <main class="main"><h2>สาเหตุของโลกร้อน</h2>
+            <p>โลกร้อนเกิดจากการปล่อยก๊าซเรือนกระจก เช่น คาร์บอนไดออกไซต์เเละมีเทน ซึ่งมาจากการเผาไหม่เชื้อเพลิงฟอสซิล การตัดไม้ทำลายป่า เเละการกลิตทางอุตสาหกรรม</p>
+            <h2>ผลกระทบของโลกร้อน</h2>
+            <p>ผลกระทบของโลกร้อนมีทั้งการเพิ่มขึ้นของอุณหภูมิโลก ระดับน้ำทะเลที่สูงขึ้น การสูญเสียที่อยู่อาศัยของสัตว์ เเละการเปลี่ยนเเปลงของสภาพภูมิอากาศ</p>
+            <h2>เเนวทางเเก้ไข</h2>
+            <p>เราสามารถช่วยโลกร้อนได้โดยการใช้พลังงานสะอาด ลดการใช้พลาสติก เเละสนับสนุนกิจกรรมปลูกป่า รวมถึงการปล่อยก๊าซคาร์บอน</p>
+        </main>
+        <aside class="sidebar">สถิติที่น่าสนใจ
+            <p>• ปี 2023: อุณหภูมิเฉลี่ยของโลกสูงขึ้น 1.2°c</p>
+            <p>• น้ำเเข็งขั้วโลกละลายเร็วกว่าปกติ 60%</p>
+            <p>• กว่า 200 สายพันธุ์สัตว์สูญพันธุ๋ทุกปี</p>
+            <h1></h1>
+            <h1></h1>
+        </aside>
+        <footer class="footer"><p>ร่วมมือกันลดโลกร้อน เพื่อนาคตของเรา</p>
+            <p>@ 2025 Global Warming Awareness</p>
+        </footer>
+    </div>
+</body>
+</html>

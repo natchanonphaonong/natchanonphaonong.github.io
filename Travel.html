@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test na</title>
+</head>
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "spacer spacer"
+        "footer footer";
+    gap: 0;
+    padding: 0;
+}
+
+header {
+    grid-area: header;
+    background: #2a9d8f;
+    padding: 20px;
+    text-align: center;
+    color:#264653
+}
+
+main {
+    grid-area: main;
+    background: #f4a261;
+    padding: 1px;
+    text-align: center;
+    color:white;
+}
+
+.spacer {
+    grid-area: spacer;
+    background: #ebebeb; 
+    padding: 20px 0; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    height: 300px; 
+}
+h1 {
+    font-size: 20px;
+    color: #264653;
+}
+.box {
+    width: 99%; /* ปรับความกว้างให้เหมาะสม */
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+footer {
+    grid-area: footer;
+    background: #e76f51;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-top: 2px solid #264653;
+}
+</style>
+<body>
+    <div class="container">
+        <header class="header">
+           <h2>แหล่งท่องเที่ยวยอดนิยม</h2>
+        </header>
+        <main class="main">
+            <h3> ทะเล ภูเขา เมือง </h3>
+        </main>
+        <div class="spacer">
+            <div class="box"><h1>สถานที่ท่องเที่ยว</h1>
+            <p>ชายหาดทรายขาว น้ำทะเลใส เช่น เกาะสมุย เกาะพีพี เเละ หาดป่าดอง</p></div>
+            <div class="box"><h1>สถานที่ท่องเที่ยวภูเขา</h1>
+                <p>สัมผัสอากาศหนาวเเละวิวธรรมชาติ เช่น ดอยอินทนนท์ ดอยสุเทพ เเละเขาค้อ</p></div>
+            <div class="box"><h1>สถานที่ท่องเที่ยวในเมือง</h1>
+                <p>เมืองที่เต็มไปด้วยวัฒนธรรมเเละเเสงสี เช่น กรุงเทพ เชียวใหม่ เเละพัทยา</p></div>
+        </div>
+        <footer class="footer">
+            <p>&copy;2025 Travel Enthusiasts</p>
+        </footer>
+    </div>
+</body>
+</html>

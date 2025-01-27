@@ -114,7 +114,7 @@
 
         .snowflake {
             position: absolute;
-            top: -30px;
+            top: -50px;
             color: #ffffff;
             font-size: 24px;
             user-select: none;
@@ -216,6 +216,30 @@
                 left: 100%;
             }
         }
+        .contact-info {
+            position: absolute;
+            top: 50%;  /* ตั้งตำแหน่งในแนวตั้ง */
+            left: 50%;  /* ตั้งตำแหน่งในแนวนอน */
+            transform: translate(-50%, -50%); /* เคลื่อนที่กลับไปกลาง */
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.5em;  /* ขนาดฟอนต์หลักที่ใหญ่ขึ้น */
+            background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
+            padding: 40px;  /* เพิ่มระยะห่างรอบๆ */
+            border-radius: 15px;  /* มุมโค้งมน */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info h2 {
+            font-size: 2.5em;  /* ขนาดฟอนต์ของหัวข้อที่ใหญ่ขึ้น */
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;  /* เพิ่มระยะห่างระหว่างข้อความ */
+            font-size: 1.3em;  /* ขนาดฟอนต์ของข้อความ */
+        }
+
     </style>
 </head>
 <body>
@@ -229,41 +253,7 @@
         </div>
     </div>
 <body>
-    <header>
-        <h1>เกม.com</h1>
-    </header>
-    <div class="game-gallery">
-        <div class="game-card">
-            <img src="img/worm.webp" alt="Game 1 Poster">
-            <h2>เกมหนอน</h2>
-            <p></p>
-            <a href="snake_game.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/sumo.jpg" alt="Game 2 Poster">
-            <h2>เกมซูโม่ต่อสู้</h2>
-            <p></p>
-            <a href="subway.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/zombie.avif" alt="Game 3 Poster">
-            <h2>เกมยิงซอมบี้</h2>
-            <p></p>
-            <a href="marilo.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/1v1.jpg" alt="Game 4 Poster">
-            <h2>เกมเอาชีวิตรอด</h2>
-            <p></p>
-            <a href="1v1.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/9pool.avif" alt="Game 5 Poster">
-            <h2>เกมสนุ๊ก</h2>
-            <p></p>
-            <a href="xo.html">Play Now</a>
-        </div>
-    </div>
+
 
     <!-- เพิ่มต้นคริสต์มาส -->
     <img src="img/crismas.png" alt="Christmas Tree" class="christmas-tree">
@@ -277,6 +267,17 @@
     <div class="merry-christmas">
         Merry Christmas
     </div>
+    <!-- ข้อมูลการติดต่อ -->
+    <div class="contact-info">
+        <h2>ติดต่อเรา</h2>
+        <p>เบอร์โทร: 089-095-9377</p>
+        <p>อีเมล: natchanonphaonong@gmail.com</p>
+        <p>Facebook: natchanon phaonong</p>
+        <p>IG: Chanxnp__</p>
+        <p>ผู้สร้างเว็บไซต์: ณัฐชนน เผ่าหนอง</p>
+        
+    </div>
+
 
     <!-- JavaScript สำหรับหิมะตก -->
     <script>

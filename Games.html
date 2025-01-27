@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test na</title>
+</head>
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "main main"
+        "spacer spacer"
+        "footer footer";
+    gap: 0;
+    padding: 0;
+}
+
+
+main {
+    grid-area: main;
+    background: #ffcc00;
+    padding: 1px;
+    text-align: center;
+    color:white;
+}
+
+.spacer {
+    grid-area: spacer;
+    background: #ebebeb; 
+    padding: 20px 0; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
+    height: 300px; 
+}
+h1 {
+    font-size: 20px;
+    color: #264653;
+}
+.box {
+    width: 99%; 
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 8px;
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-top: 2px solid #264653;
+    width: 100%; 
+}
+button {
+    padding: 15px 25px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 11%; 
+    margin-top: 5px; 
+    text-align: center;
+
+}
+</style>
+<body>
+
+        <main class="main">
+            <h2> เกมสนุกๆ การ์ตูนยอดฮิต </h2>
+        </main>
+        <div class="spacer">
+            <div class="box"><p>เล่นเกมสนุก ๆ ได้ที่นี่ ! เช่น เกมจับคู่ เกมระบายสี หรือเกมพัฒนาสมอง</p>
+            <p>• <a href="0.html"> เกมจับคู่รูปภาพ</a></p>
+            <p>• <a href="0.html"> เกมทายคำศัพท์</a></p>
+            <p>• <a href="0.html"> เกมระบายสีออนไลน์</a></p>
+        
+        </div> 
+
+        
+        <footer class="footer">
+            <p>กลับไปที่<a href="Kid.html"> หน้าเเรก</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -231,39 +231,10 @@
 <body>
     <header>
         <h1>เกม.com</h1>
+
+        <a href="game.html" class="start-game-button">เริ่มเล่นเกมเลย</a>
     </header>
-    <div class="game-gallery">
-        <div class="game-card">
-            <img src="img/worm.webp" alt="Game 1 Poster">
-            <h2>เกมหนอน</h2>
-            <p></p>
-            <a href="snake_game.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/sumo.jpg" alt="Game 2 Poster">
-            <h2>เกมซูโม่ต่อสู้</h2>
-            <p></p>
-            <a href="subway.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/zombie.avif" alt="Game 3 Poster">
-            <h2>เกมยิงซอมบี้</h2>
-            <p></p>
-            <a href="marilo.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/1v1.jpg" alt="Game 4 Poster">
-            <h2>เกมเอาชีวิตรอด</h2>
-            <p></p>
-            <a href="1v1.html">Play Now</a>
-        </div>
-        <div class="game-card">
-            <img src="img/9pool.avif" alt="Game 5 Poster">
-            <h2>เกมสนุ๊ก</h2>
-            <p></p>
-            <a href="xo.html">Play Now</a>
-        </div>
-    </div>
+   
 
     <!-- เพิ่มต้นคริสต์มาส -->
     <img src="img/crismas.png" alt="Christmas Tree" class="christmas-tree">
@@ -274,10 +245,7 @@
     <img src="img/santa.png" alt="Santa Riding" class="santa">
 
     <!-- เพิ่มข้อความ Merry Christmas -->
-    <div class="merry-christmas">
-        Merry Christmas
-    </div>
-
+   
     <!-- JavaScript สำหรับหิมะตก -->
     <script>
         function toggleMenu() {
@@ -304,3 +272,26 @@
         createSnowflakes(); // สร้างหิมะ
     </script>
 </body>
+<style>
+    /* CSS ปุ่มเริ่มเล่นเกมเลย */
+    .start-game-button {
+        display: inline-block;
+        padding: 20px 40px;
+        font-size: 2em;
+        color: #ffffff;
+        background-color: #ff5722;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .start-game-button:hover {
+        background-color: #e64a19;
+    }
+</style>
